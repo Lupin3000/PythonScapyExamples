@@ -4,6 +4,9 @@ Simple Python DNS sniffer script (_via Python Scapy_) to display DNS requests an
 
 ## Prepare environment
 
+- You can use Python virtualenv
+- Python3.x is needed.
+
 ```shell
 # create Project directory
 $ mkdir -p ~/Projects/DNS-Sniffer && cd ~/Projects/DNS-Sniffer
@@ -20,14 +23,19 @@ $ pip install -r requirements.txt
 
 ## Run DNS Sniffer
 
+just run it...
+
 ```shell
 # execute python DNS sniffer script
+(venv)
 $ python dns_sniff.py
 ```
 
 to interrupt press [CTRL + c] and follow terminal output.
 
-## Example outpu
+## Example output
+
+some example from my terminal...
 
 ```shell
 Enter your interface (eq en0): en11
