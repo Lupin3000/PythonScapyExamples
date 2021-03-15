@@ -18,6 +18,7 @@ $ virtualenv -p python3 venv
 $ . venv/bin/activate
 
 # install requirements
+(venv)
 $ pip install -r requirements.txt
 ```
 
