@@ -26,3 +26,33 @@ $ python dns_sniff.py
 ```
 
 to interrupt press [CTRL + c] and follow terminal output.
+
+## Example outpu
+
+```shell
+Enter your interface (eq en0): en11
+SRC: 172.20.10.10 - DST: 172.20.10.1 : eu-prod.asyncgw.teams.microsoft.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : emea.ng.msg.teams.microsoft.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : pagead2.googlesyndication.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : outlook.live.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : go.trouter.skype.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : azwcus1-client-s.gateway.messenger.live.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : lpcres.delve.office.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : safebrowsing.googleapis.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : storage.live.com.
+...
+SRC: 172.20.10.10 - DST: 172.20.10.1 : pr.ybp.yahoo.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : s.yimg.com.
+SRC: 172.20.10.10 - DST: 172.20.10.1 : beap-bc.yahoo.com.
+Sniffing finished
+KeyboardInterrupt ID: 2 <frame at 0x7fa448c7b620, file '/Users/lupin/Desktop/myTest/venv/lib/python3.7/site-packages/scapy/arch/bpf/supersocket.py', line 420, code bpf_select> has been caught.
+You like to save results to file report.json (Y/N)?: Y
+Save content into: /Users/lupin/Desktop/myTest/report.json
+You like to see the top 5 dns requests (Y/N)?: Y
+eu-prod.asyncgw.teams.microsoft.com.              : 22
+emea.ng.msg.teams.microsoft.com.                  : 15
+pagead2.googlesyndication.com.                    : 7
+outlook.live.com.                                 : 5
+go.trouter.skype.com.                             : 2
+```
+
