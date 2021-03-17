@@ -16,6 +16,8 @@ $ mkdir -p ~/Projects/FakeWifi && cd ~/Projects/FakeWifi
 
 # create virtualenv
 $ virtualenv -p python3 venv
+# or
+$ python3 -m venv venv
 
 # activate virtualenv
 $ . venv/bin/activate
@@ -23,6 +25,11 @@ $ . venv/bin/activate
 # install requirements
 (venv)
 $ pip install -r requirements.txt
+# or
+$ pip install Faker scapy
+
+# list packages (optional)
+$ pip freeze
 
 # make file executable
 chmod u+x FakeWifiAP.py 
