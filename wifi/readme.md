@@ -1,6 +1,6 @@
 # Wifi Fake AP
 
-Simple Python 3 script to create fake access points, similar to mdk3 or mdk4.
+Simple script to create fake access points, similar to mdk3 or mdk4.
 
 _Note:_ AP's are just fake and STA's cannot connect!!!
 
