@@ -1,11 +1,12 @@
 # DNS Sniffer
 
-Simple Python DNS sniffer script (_via Python Scapy_) to display DNS requests and optional to store DNS requests (_as JSON_) with timestamp and to show top 5.
+Simple Python DNS sniffer script to display DNS requests and optional to store DNS requests (_as JSON_) with timestamp and/or to show top 5 requests.
 
 ## Prepare environment
 
 - You can use Python virtualenv
-- Python3.x is needed.
+- Python3.x is needed
+- root rights required (_or via sudo_)
 
 ```shell
 # install needed packages
@@ -76,4 +77,3 @@ pagead2.googlesyndication.com.                    : 7
 outlook.live.com.                                 : 5
 go.trouter.skype.com.                             : 2
 ```
-
