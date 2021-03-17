@@ -8,6 +8,8 @@ _Note:_ AP's are just fake and STA's cannot connect!!!
 
 - You can use Python virtualenv
 - Python3.x is needed
+- Wifi interface must be in "Monitor Mode" (_you can read [here](https://softwaretester.info/wifi-monitor-mode-basics/) how to do_)
+- root rights required (_or via sudo_)
 
 ```shell
 # install needed packages
