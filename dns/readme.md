@@ -1,6 +1,6 @@
 # DNS Sniffer
 
-Simple Python DNS sniffer script to display DNS requests and optional to store DNS requests (_as JSON_) with timestamp and/or to show top 5 requests.
+Simple DNS sniffer script to display DNS requests and optional to store DNS requests (_as JSON file with timestamp_) and/or to show top 5 requests.
 
 ## Prepare environment
 
