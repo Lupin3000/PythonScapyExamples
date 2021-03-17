@@ -8,11 +8,16 @@ Simple Python DNS sniffer script (_via Python Scapy_) to display DNS requests an
 - Python3.x is needed.
 
 ```shell
+# install needed packages
+$ sudo apt install python3-pip python3-venv
+
 # create Project directory
 $ mkdir -p ~/Projects/DNS-Sniffer && cd ~/Projects/DNS-Sniffer
 
 # create virtualenv
 $ virtualenv -p python3 venv
+# or
+$ python3 -m venv venv
 
 # activate virtualenv
 $ . venv/bin/activate
@@ -20,6 +25,14 @@ $ . venv/bin/activate
 # install requirements
 (venv)
 $ pip install -r requirements.txt
+# or
+$ pip install scapy
+
+# list packages (optional)
+$ pip freeze
+
+# make file executable
+chmod u+x dns_sniff.py
 ```
 
 ## Run DNS Sniffer
@@ -27,9 +40,9 @@ $ pip install -r requirements.txt
 just run it...
 
 ```shell
-# execute python DNS sniffer script
+# run DNS sniffer script
 (venv)
-$ python dns_sniff.py
+$ sudo venv/bin/python ./dns_sniff.py
 ```
 
 to interrupt press [CTRL + c] and follow terminal output.
