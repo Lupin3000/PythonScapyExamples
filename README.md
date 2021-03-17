@@ -6,6 +6,6 @@ The author of this code take no responsibility for your use or misuse!
 
 ## Table of Content
 
-- [DNS Sniffer](./..)
-- [Fake Wifi AP](./..)
+- [DNS Sniffer](./dns/readme.md)
+- [Fake Wifi AP](./wifi/readme.md)
 
