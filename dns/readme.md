@@ -23,16 +23,15 @@ $ python3 -m venv venv
 $ . venv/bin/activate
 
 # install requirements
-(venv)
-$ pip install -r requirements.txt
+(venv) $ pip install -r requirements.txt
 # or
-$ pip install scapy
+(venv) $ pip install scapy
 
 # list packages (optional)
-$ pip freeze
+(venv) $ pip freeze
 
 # make file executable
-chmod u+x dns_sniff.py
+(venv) $ chmod u+x dns_sniff.py
 ```
 
 ## Run DNS Sniffer
@@ -41,8 +40,7 @@ just run it...
 
 ```shell
 # run DNS sniffer script
-(venv)
-$ sudo venv/bin/python ./dns_sniff.py
+(venv) $ sudo venv/bin/python ./dns_sniff.py
 ```
 
 to interrupt press [CTRL + c] and follow terminal output.
