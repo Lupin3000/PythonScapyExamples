@@ -27,16 +27,15 @@ $ python3 -m venv venv
 $ . venv/bin/activate
 
 # install requirements
-(venv)
-$ pip install -r requirements.txt
+(venv) $ pip install -r requirements.txt
 # or
-$ pip install Faker scapy
+(venv) $ pip install Faker scapy
 
 # list packages (optional)
-$ pip freeze
+(venv) $ pip freeze
 
 # make file executable
-chmod u+x FakeWifiAP.py 
+(venv) $ chmod u+x FakeWifiAP.py 
 ```
 
 ## Run Fake Wifi AP
@@ -45,13 +44,13 @@ just run it...
 
 ```shell
 # show help (optional)
-$ sudo venv/bin/python ./FakeWifiAP.py --help
+(venv) $ sudo venv/bin/python ./FakeWifiAP.py --help
 
 # create only 1 fake ap
-$ sudo venv/bin/python ./FakeWifiAP.py wlan1
+(venv) $ sudo venv/bin/python ./FakeWifiAP.py wlan1
 
 # create 10 fake ap
-$ sudo venv/bin/python ./FakeWifiAP.py wlan1 -n 10
+(venv) $ sudo venv/bin/python ./FakeWifiAP.py wlan1 -n 10
 ```
 
 to interrupt press [CTRL + c]
@@ -61,7 +60,6 @@ to interrupt press [CTRL + c]
 some example from my terminal...
 
 ```shell
-$ sudo venv/bin/python ./FakeWifiAP.py wlan1 -n 5
 Following AP's are created (CTRL + c to stop):
 AP:hall - mac:40:35:b0:18:9a:70
 AP:nguyen - mac:57:8b:74:a3:d5:1c
