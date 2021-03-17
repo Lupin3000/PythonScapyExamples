@@ -12,7 +12,7 @@ Simple DNS sniffer script to display DNS requests and optional to store DNS requ
 # install needed packages
 $ sudo apt install python3-pip python3-venv
 
-# create Project directory
+# create and change into Project directory
 $ mkdir -p ~/Projects/DNS-Sniffer && cd ~/Projects/DNS-Sniffer
 
 # create virtualenv
