@@ -1,4 +1,4 @@
-# Python 3 Scapy scripts
+# Python 3 - Scapy scripts
 
 You can read all about scapy [here](https://scapy.readthedocs.io/en/latest/introduction.html).
 
