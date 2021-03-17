@@ -46,10 +46,10 @@ just run it...
 # show help (optional)
 (venv) $ sudo venv/bin/python ./FakeWifiAP.py --help
 
-# create only 1 fake ap
+# create only 1 fake AP
 (venv) $ sudo venv/bin/python ./FakeWifiAP.py wlan1
 
-# create 10 fake ap
+# create 10 fake AP's
 (venv) $ sudo venv/bin/python ./FakeWifiAP.py wlan1 -n 10
 ```
 
