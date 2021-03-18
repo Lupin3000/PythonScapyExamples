@@ -1,6 +1,6 @@
 # DNS Sniffer
 
-Simple DNS sniffer script to display DNS requests and optional to store DNS requests (_as JSON file with timestamp_) and/or to show top 5 requests.
+DNS sniffer script to display DNS requests and optional to store DNS requests (_as JSON file with a timestamp_) and/or to show top 5 requests.
 
 ## Prepare environment
 

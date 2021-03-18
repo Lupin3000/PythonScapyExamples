@@ -38,7 +38,7 @@ $ . venv/bin/activate
 (venv) $ chmod u+x FakeWifiAP.py 
 ```
 
-## Run Fake Wifi AP
+## Run Fake Wi-Fi AP
 
 just run it...
 
