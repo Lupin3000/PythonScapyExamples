@@ -4,7 +4,7 @@ from sys import exit
 from threading import Thread
 from time import sleep
 
-from scapy.layers.dot11 import Dot11, Dot11Beacon, Dot11Elt, sniff
+from scapy.layers.dot11 import Dot11, Dot11Beacon, Dot11ProbeResp, Dot11Elt, sniff
 
 
 def evaluate_sniffing_packet(packet):
@@ -14,20 +14,21 @@ def evaluate_sniffing_packet(packet):
     :param packet: sniffed Wifi packets
     :type packet: class
     """
-    if packet.haslayer(Dot11Beacon):
-        bssid = packet[Dot11].addr2
-        ssid = packet[Dot11Elt].info.decode().strip()
-        if not ssid:
-            ssid = "N/A"
-        try:
-            dbm = packet.dBm_AntSignal
-        except:
-            dbm = "N/A"
-        stats = packet[Dot11Beacon].network_stats()
-        channel = stats.get("channel")
-        protocol = stats.get("crypto")
+    if packet.haslayer(Dot11Beacon) or packet.haslayer(Dot11ProbeResp):
+        if packet.type == 0 and packet.subtype == 8:
+            bssid = packet[Dot11].addr2
+            ssid = packet[Dot11Elt].info.decode().strip()
+            if not ssid:
+                ssid = "N/A"
+            try:
+                dbm = packet.dBm_AntSignal
+            except:
+                dbm = "N/A"
+            stats = packet[Dot11Beacon].network_stats()
+            channel = stats.get("channel")
+            protocol = stats.get("crypto")
 
-        print("{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, next(iter(protocol))))
+            print("{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, next(iter(protocol))))
 
 
 def set_specific_channel(channel_number):
