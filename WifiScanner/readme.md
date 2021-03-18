@@ -1,6 +1,6 @@
 # Wifi Scanner
 
-Script to scan on 2.4 GHz for AP's
+Script to scan on 2.4 GHz Wi-Fi's (_if ENC is OPN or WEP the output is colored_).
 
 ## Prepare environment
 
