@@ -8,6 +8,6 @@ The author of this scripts (_code_) take no responsibility for your use or misus
 
 ## Table of Content
 
-- [DNS Sniffer](./dns/readme.md)
-- [Fake Wifi AP](./wifi/readme.md)
+- [DNS Sniffer](./DNSsniffer/readme.md)
+- [Fake Wifi AP](./FakeWifiAP/readme.md)
 

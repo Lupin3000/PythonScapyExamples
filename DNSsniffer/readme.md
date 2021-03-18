@@ -32,7 +32,7 @@ $ . venv/bin/activate
 (venv) $ pip freeze
 
 # make file executable
-(venv) $ chmod u+x dns_sniff.py
+(venv) $ chmod u+x DNSSniffer.py
 ```
 
 ## Run DNS Sniffer
@@ -41,7 +41,7 @@ just run it...
 
 ```shell
 # run DNS sniffer script
-(venv) $ sudo venv/bin/python ./dns_sniff.py
+(venv) $ sudo venv/bin/python ./DNSSniffer.py
 ```
 
 to interrupt press [CTRL + c] and follow terminal output.
@@ -70,7 +70,7 @@ Sniffing finished
 KeyboardInterrupt ID: 2 <frame at 0x7fa448c7b620, file '/Users/lupin/Desktop/myTest/venv/lib/python3.7/site-packages/scapy/arch/bpf/supersocket.py', line 420, code bpf_select> has been caught.
 You like to save results to file report.json (Y/N)?: Y
 Save content into: /Users/lupin/Desktop/myTest/report.json
-You like to see the top 5 dns requests (Y/N)?: Y
+You like to see the top 5 DNSsniffer requests (Y/N)?: Y
 eu-prod.asyncgw.teams.microsoft.com.              : 22
 emea.ng.msg.teams.microsoft.com.                  : 15
 pagead2.googlesyndication.com.                    : 7

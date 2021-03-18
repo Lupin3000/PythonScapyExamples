@@ -28,7 +28,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
                 file_handler.write(json.dumps(stored_dns_requests))
                 print("Save content into: {}".format(os.path.abspath(target_file)))
 
-        show_top_domains = input("You like to see the top 5 dns requests (Y/N)?: ")
+        show_top_domains = input("You like to see the top 5 DNSsniffer requests (Y/N)?: ")
         if show_top_domains == 'Y':
             top_domains = Counter(stored_dns_requests.values()).most_common(5)
             for key, value in top_domains:
