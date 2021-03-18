@@ -1,10 +1,20 @@
 import argparse
+import signal
 from os import system
 from sys import exit
 from threading import Thread
 from time import sleep
 
 from scapy.layers.dot11 import Dot11, Dot11Beacon, Dot11ProbeResp, Dot11Elt, sniff
+
+
+def keyboard_interrupt_handler(interrupt_signal, frame):
+    """
+    Keyboard (CTRL + C) interrupt function
+    """
+    print("Scanning finished")
+    print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
+    exit(0)
 
 
 def evaluate_sniffing_packet(packet):
@@ -27,8 +37,9 @@ def evaluate_sniffing_packet(packet):
             stats = packet[Dot11Beacon].network_stats()
             channel = stats.get("channel")
             protocol = stats.get("crypto")
+            enc = next(iter(protocol))
 
-            print("{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, next(iter(protocol))))
+            print("{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, enc))
 
 
 def set_specific_channel(channel_number):
@@ -99,4 +110,5 @@ def run_app():
 
 if __name__ == "__main__":
     interface = None
+    signal.signal(signal.SIGINT, keyboard_interrupt_handler)
     run_app()
