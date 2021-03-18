@@ -1,8 +1,6 @@
-# Wifi Fake AP
+# Wifi Scanner
 
-Script to create fake access points, similar to mdk3 or mdk4.
-
-_Note:_ AP's are just fake and STA's cannot connect!!!
+Script to scan on 2.4 GHz for AP's
 
 ## Prepare environment
 
@@ -16,7 +14,7 @@ _Note:_ AP's are just fake and STA's cannot connect!!!
 $ sudo apt install python3-pip python3-venv
 
 # create and change into Project directory
-$ mkdir -p ~/Projects/FakeWifi && cd ~/Projects/FakeWifi
+$ mkdir -p ~/Projects/WifiScan && cd ~/Projects/WifiScan
 
 # create virtualenv
 $ virtualenv -p python3 venv
@@ -35,22 +33,19 @@ $ . venv/bin/activate
 (venv) $ pip freeze
 
 # make file executable
-(venv) $ chmod u+x FakeWifiAP.py 
+(venv) $ chmod u+x ScanWifi.py 
 ```
 
-## Run Fake Wifi AP
+## Run Wifi Scanner
 
 just run it...
 
 ```shell
 # show help (optional)
-(venv) $ sudo venv/bin/python ./FakeWifiAP.py --help
+(venv) $ sudo venv/bin/python ./ScanWifi.py --help
 
-# create only 1 fake AP
-(venv) $ sudo venv/bin/python ./FakeWifiAP.py wlan1
-
-# create 10 fake AP's
-(venv) $ sudo venv/bin/python ./FakeWifiAP.py wlan1 -n 10
+# start scanning
+(venv) $ sudo venv/bin/python ./ScanWifi.py wlan1
 ```
 
 to interrupt press [CTRL + c]
@@ -60,10 +55,5 @@ to interrupt press [CTRL + c]
 some example from my terminal...
 
 ```shell
-Following AP's are created (CTRL + c to stop):
-AP:hall - mac:40:35:b0:18:9a:70
-AP:nguyen - mac:57:8b:74:a3:d5:1c
-AP:shaw-brown - mac:4e:e1:b5:42:20:17
-AP:wiley-johnson - mac:52:99:2f:34:b1:9e
-AP:cooper - mac:f6:d4:84:61:d9:5e
+...
 ```

@@ -4,10 +4,11 @@ You can read all about scapy [here](https://scapy.readthedocs.io/en/latest/intro
 
 **Very Important**
 
-The author of this scripts (_code_) take no responsibility for your use or misuse! The information included at this repository is for educational purposes only!
+The author of these scripts (_code_) take no responsibility for your use or misuse! The information included at this repository is for educational purposes only!
 
 ## Table of Content
 
 - [DNS Sniffer](./DNSsniffer/readme.md)
 - [Fake Wifi AP](./FakeWifiAP/readme.md)
+- [Wifi Scanner](./WifiScanner/readme.md)
 
