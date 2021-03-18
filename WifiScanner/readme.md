@@ -44,8 +44,11 @@ just run it...
 # show help (optional)
 (venv) $ sudo venv/bin/python ./ScanWifi.py --help
 
-# start scanning
-(venv) $ sudo venv/bin/python ./ScanWifi.py wlan1
+# start scanning only on specific channel
+(venv) $ sudo venv/bin/python ./ScanWifi.py wlan1 -c 9
+
+# start scanning on all 2.4 GHz channels
+(venv) $ sudo venv/bin/python ./ScanWifi.py wlan1 --all
 ```
 
 to interrupt press [CTRL + c]
