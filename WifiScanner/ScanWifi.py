@@ -104,7 +104,6 @@ def run_app():
     print("-" * 85)
     print("{:<24} {:<35} {:<5} {:<7} {}".format("BSSID", "SSID", "dbm", "CH", "ENC"))
     print("-" * 85)
-
     sniff(prn=evaluate_sniffing_packet, iface=interface)
 
 
