@@ -50,10 +50,10 @@ def change_channel():
     global interface
 
     print("Change channels for interface {}".format(interface))
-    channel = 1
+    channel_number = 1
     while True:
-        system(f"iwconfig {interface} channel {channel}")
-        channel = channel % 14 + 1
+        system(f"iwconfig {interface} channel {channel_number}")
+        channel_number = channel_number % 14 + 1
         sleep(0.5)
 
 
