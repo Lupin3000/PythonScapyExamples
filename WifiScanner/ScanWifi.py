@@ -24,6 +24,9 @@ def evaluate_sniffing_packet(packet):
     :param packet: sniffed Wifi packets
     :type packet: class
     """
+    start_c = '\33[33m'
+    end_c = '\033[0m'
+
     if packet.haslayer(Dot11Beacon) or packet.haslayer(Dot11ProbeResp):
         if packet.type == 0 and packet.subtype == 8:
             bssid = packet[Dot11].addr2
@@ -39,7 +42,10 @@ def evaluate_sniffing_packet(packet):
             protocol = stats.get("crypto")
             enc = next(iter(protocol))
 
-            print("{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, enc))
+            if enc == 'OPN' or enc == 'WEP':
+                print(start_c + "{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, enc) + end_c)
+            else:
+                print("{:<24} {:<35} {:<5} {:<7} {}".format(bssid, ssid, dbm, channel, enc))
 
 
 def set_specific_channel(channel_number):
