@@ -65,7 +65,7 @@ BSSID                    SSID                                dbm   CH      ENC
 09:3e:5d:34:11:b4        Sunrise_2.4GHz_3411B0               -79   6       WPA/PSK
 55:67:51:c3:2c:b4        UPC88417C7                          -68   6       WPA/PSK
 8b:30:dc:c2:ea:62        Bose ST Home Thtr (2AB026)          -77   6       OPN
-b8:ce:a3:d6:81:d0        Schwerthelm                         -71   5       WPA2/PSK
+b8:ce:a3:d6:81:d0        Dosmeethelm                         -71   5       WPA2/PSK
 54:67:51:3c:2c:b4        UPC88417C7                          -68   6       WPA/PSK
 80:30:dc:c2:dd:62        Bose ST Home Thtr (2AB026)          -78   6       OPN
 ...
