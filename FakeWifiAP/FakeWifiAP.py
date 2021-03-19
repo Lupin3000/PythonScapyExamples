@@ -11,7 +11,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
     """
     Keyboard (CTRL + C) interrupt function
     """
-    print("Stop fake AP's")
+    print("Stop providing fake AP's")
     print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
     exit(0)
 

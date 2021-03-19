@@ -60,6 +60,7 @@ def run_sniffer():
     sniff(iface=interface, filter="port 53", prn=query_sniff, store=0)
 
 
-stored_dns_requests = dict()
-signal.signal(signal.SIGINT, keyboard_interrupt_handler)
-run_sniffer()
+if __name__ == "__main__":
+    stored_dns_requests = dict()
+    signal.signal(signal.SIGINT, keyboard_interrupt_handler)
+    run_sniffer()
