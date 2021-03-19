@@ -1,4 +1,4 @@
-# Wifi Fake AP
+# Wi-Fi Fake AP
 
 Script to create fake access points, similar to mdk3 or mdk4.
 

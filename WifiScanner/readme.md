@@ -1,4 +1,4 @@
-# Wifi Scanner
+# Wi-Fi Scanner
 
 Script to scan on 2.4 GHz Wi-Fi's (_if ENC is OPN or WEP the output is colored_).
 
@@ -27,7 +27,7 @@ $ . venv/bin/activate
 # install requirements
 (venv) $ pip install -r requirements.txt
 # or
-(venv) $ pip install Faker scapy
+(venv) $ pip install scapy
 
 # list packages (optional)
 (venv) $ pip freeze
@@ -36,7 +36,7 @@ $ . venv/bin/activate
 (venv) $ chmod u+x ScanWifi.py 
 ```
 
-## Run Wifi Scanner
+## Run Wi-Fi Scanner
 
 just run it...
 
