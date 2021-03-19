@@ -1,6 +1,8 @@
 # Python 3 - Scapy scripts
 
-You can read all about scapy [here](https://scapy.readthedocs.io/en/latest/introduction.html).
+## Why this repository?
+
+I created this repository to learn (_Python_) and to provide some simple tiny scripts for my [suitcases](https://softwaretester.info/suitcases-full-of-fun/). You can read all about Python Scapy [here](https://scapy.readthedocs.io/en/latest/introduction.html).
 
 **Very Important**
 
