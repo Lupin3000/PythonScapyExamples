@@ -44,14 +44,14 @@ def run_app():
     """
     global interface
 
-    description = 'Wifi deauthentication'
+    description = 'Wifi deauthentication (also possible ff:ff:ff:ff:ff:ff for target or 0 for number)'
     epilog = 'The author of this code take no responsibility for your use or misuse'
     parser = argparse.ArgumentParser(prog='WifiDeauth.py', description=description, epilog=epilog)
-    parser.add_argument("interface", help="Your interface in monitor mode")
-    parser.add_argument('-t', '--target', help="Target MAC address to deauthenticate")
-    parser.add_argument('-g', '--gateway', help="Gateway MAC address that target is authenticated with")
+    parser.add_argument('interface', help="Your interface in monitor mode")
+    parser.add_argument('target', help="Target MAC address to deauthenticate")
+    parser.add_argument('gateway', help="Gateway MAC address that target is authenticated with")
     parser.add_argument('-n', '--number', help='Number of deauthentication frames to send', default=0, type=int)
-    parser.add_argument('-i', '--interval', help="Frequency between two frames, default is 100ms", default=0.1)
+    parser.add_argument('-i', '--interval', help="Frequency between two frames, default is 0.1 (100ms)", default=0.1)
     args = parser.parse_args()
 
     interface = args.interface
@@ -67,9 +67,9 @@ def run_app():
         loop = 0
 
     if number:
-        print("Sending {} frames every {} s".format(number, interval))
+        print("Sending {} frames every {} sec to {} from {}".format(number, interval, target, gateway))
     else:
-        print("Sending infinite frames every {} s".format(interval))
+        print("Sending infinite frames every {} sec to {} from {}".format(interval, target, gateway))
 
     send_deauthentication_frames(target, gateway, interval, number, loop)
 
