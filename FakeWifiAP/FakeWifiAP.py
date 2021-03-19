@@ -1,9 +1,19 @@
 import argparse
+import signal
 from sys import exit
 from threading import Thread
 
 from faker import Faker
 from scapy.layers.dot11 import Dot11, Dot11Beacon, Dot11Elt, RadioTap, sendp
+
+
+def keyboard_interrupt_handler(interrupt_signal, frame):
+    """
+    Keyboard (CTRL + C) interrupt function
+    """
+    print("Stop fake AP's")
+    print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
+    exit(0)
 
 
 def create_fake_data(count):
@@ -64,4 +74,5 @@ def run_app():
 
 
 if __name__ == "__main__":
+    signal.signal(signal.SIGINT, keyboard_interrupt_handler)
     run_app()
