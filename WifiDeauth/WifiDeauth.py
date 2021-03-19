@@ -51,7 +51,7 @@ def run_app():
     parser.add_argument('target', help="Target MAC address to deauthenticate")
     parser.add_argument('gateway', help="Gateway MAC address that target is authenticated with")
     parser.add_argument('-n', '--number', help='Number of deauthentication frames to send', default=0, type=int)
-    parser.add_argument('-i', '--interval', help="Frequency between two frames, default is 0.1 (100ms)", default=0.1)
+    parser.add_argument('-i', '--interval', help="Time between frames, default is 0.1s (100ms)", default=0.1)
     args = parser.parse_args()
 
     interface = args.interface
@@ -67,9 +67,9 @@ def run_app():
         loop = 0
 
     if number:
-        print("Sending {} frames every {} sec to {} from {}".format(number, interval, target, gateway))
+        print("Sending {} frames every {}s to {} from {}".format(number, interval, target, gateway))
     else:
-        print("Sending infinite frames every {} sec to {} from {}".format(interval, target, gateway))
+        print("Sending infinite frames every {}s to {} from {}".format(interval, target, gateway))
 
     send_deauthentication_frames(target, gateway, interval, number, loop)
 
