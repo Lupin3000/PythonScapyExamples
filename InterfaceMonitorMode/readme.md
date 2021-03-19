@@ -9,7 +9,7 @@ Script to set specific Wi-Fi interface into monitor mode
 
 _Note:_ [Here](https://softwaretester.info/wifi-monitor-mode-basics/) you will find different other options (_combinations_), to set your interface into monitor mode.
 
-## Run Wi-Fi Scanner
+## Run Bash Script
 
 just run it...
 
