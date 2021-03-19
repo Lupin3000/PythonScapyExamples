@@ -7,12 +7,14 @@ Script to set specific Wi-Fi interface into monitor mode
 - Packages `ip`and `iwconfig` must be installed
 - root rights required (_or via sudo_)
 
+_Note:_ [Here](https://softwaretester.info/wifi-monitor-mode-basics/) you will find different other options (_combinations_), to set your interface into monitor mode.
+
 ## Run Wi-Fi Scanner
 
 just run it...
 
 ```shell
-# # make file executable
+# make file executable
 $ chmod u+x monitor-mode.sh
  
 # show help (optional)
