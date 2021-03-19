@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 import signal
 from os import system
