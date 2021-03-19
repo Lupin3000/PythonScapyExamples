@@ -2,7 +2,7 @@
 
 ## Why this repository?
 
-I created this repository to learn (_Python_) and to provide some simple tiny scripts for my [suitcases](https://softwaretester.info/suitcases-full-of-fun/). You can read all about Python Scapy [here](https://scapy.readthedocs.io/en/latest/introduction.html).
+I created this repository to learn (_Python_) and to provide some simple tiny scripts for my [suitcases](https://softwaretester.info/suitcases-full-of-fun/). You can read all about Python Scapy [here](https://scapy.readthedocs.io/en/latest/introduction.html). If you want, you are very welcome to participate. Most of the scripts can still be improved or expanded.
 
 **Very Important**
 
