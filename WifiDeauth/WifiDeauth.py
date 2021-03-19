@@ -49,7 +49,7 @@ def run_app():
     parser = argparse.ArgumentParser(prog='WifiDeauth.py', description=description, epilog=epilog)
     parser.add_argument('interface', help="Your interface in monitor mode")
     parser.add_argument('target', help="Target MAC address to deauthenticate")
-    parser.add_argument('gateway', help="Gateway MAC address that target is authenticated with")
+    parser.add_argument('gateway', help="MAC address that target is authenticated with")
     parser.add_argument('-n', '--number', help='Number of deauthentication frames to send', default=0, type=int)
     parser.add_argument('-i', '--interval', help="Time between frames, default is 0.1s (100ms)", default=0.1)
     args = parser.parse_args()
