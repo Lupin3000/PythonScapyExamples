@@ -3,7 +3,7 @@
 import json
 import os
 import signal
-import sys
+from sys import exit
 from collections import Counter
 from datetime import datetime
 
@@ -34,7 +34,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
             for key, value in top_domains:
                 print("{:<50}: {}".format(key, value))
 
-    sys.exit(0)
+    exit(0)
 
 
 def query_sniff(pkt):
@@ -51,7 +51,7 @@ def query_sniff(pkt):
             print("SRC: {} - DST: {} : {}".format(ip_src, ip_dst, domain))
 
 
-def run_sniffer():
+def run_app():
     """
     Scapy packet sniffer function
     """
@@ -63,4 +63,4 @@ def run_sniffer():
 if __name__ == "__main__":
     stored_dns_requests = dict()
     signal.signal(signal.SIGINT, keyboard_interrupt_handler)
-    run_sniffer()
+    run_app()
