@@ -7,7 +7,7 @@ Script to set specific Wi-Fi interface into monitor mode
 - Packages `ip`and `iwconfig` must be installed
 - root rights required (_or via sudo_)
 
-_Note:_ [Here](https://softwaretester.info/wifi-monitor-mode-basics/) you will find different other options (_combinations_), to set your interface into monitor mode.
+_Note:_ You don't have the required packages installed? [Here](https://softwaretester.info/wifi-monitor-mode-basics/) you will find different other options (_combinations_) eq `ifconfig`, `iw` or `airmon-ng` to set your interface into monitor mode.
 
 ## Run Bash Script
 
