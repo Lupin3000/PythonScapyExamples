@@ -10,10 +10,10 @@ The author of these scripts (_code_) take no responsibility for your use or misu
 
 ## Table of Content
 
-- [DNS Sniffer](./DNSsniffer) (_Python_)
 - [ARP Scanner](./ARPScanner) (_Python_)
 - [ICMP Ping](./ICMPPing) (_Python_)
-- [TCP Port Scan](./TCPPortScan) (_Python_)
+- [TCP Port Scan](./TCPPortScan) (_Python_)  
+- [DNS Sniffer](./DNSsniffer) (_Python_)
 - [HTTP Sniffer](./HTTPsniffer) (_Python_)
 - [Enable Monitor Mode](./InterfaceMonitorMode) (_Bash_)
 - [Wi-Fi Fake AP](./FakeWifiAP) (_Python_)
