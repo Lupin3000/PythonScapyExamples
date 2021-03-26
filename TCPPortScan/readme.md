@@ -11,6 +11,8 @@ Script to scan (_via TCP_) ports. Optional to set a range or single port and/or 
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/TCPPortScanner && cd ~/Projects/TCPPortScanner

@@ -12,6 +12,8 @@ Script to scan on 2.4 GHz Wi-Fi's (_if ENC is OPN or WEP the output is colored_)
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/WifiScan && cd ~/Projects/WifiScan

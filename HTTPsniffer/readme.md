@@ -11,6 +11,8 @@ Script to sniff HTTP traffic. Optional to change port and/or show POST raw data
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/HTTPsniffer && cd ~/Projects/HTTPsniffer

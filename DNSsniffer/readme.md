@@ -11,6 +11,8 @@ DNS sniffer script to display DNS requests and optional to store DNS requests (_
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/DNS-Sniffer && cd ~/Projects/DNS-Sniffer

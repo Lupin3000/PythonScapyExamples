@@ -12,6 +12,8 @@ Script to deauthenticate Wi-Fi connections.
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/WifiDeauth && cd ~/Projects/WifiDeauth

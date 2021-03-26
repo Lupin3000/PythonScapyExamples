@@ -11,6 +11,8 @@ ARP scanner script to display ARP responses for a specific IP or CIDR
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/ARP-Scanner && cd ~/Projects/ARP-Scanner

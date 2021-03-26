@@ -11,6 +11,8 @@ Super simple ICMP ping implementation
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/ICMP-Ping && cd ~/Projects/ICMP-Ping

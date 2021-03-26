@@ -14,6 +14,8 @@ _Note:_ AP's are just fake and STA's cannot connect!!!
 ```shell
 # install needed packages
 $ sudo apt install python3-pip python3-venv
+# or
+$ sudo pip3 install virtualenv
 
 # create and change into Project directory
 $ mkdir -p ~/Projects/FakeWifi && cd ~/Projects/FakeWifi
