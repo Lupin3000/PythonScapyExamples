@@ -1,6 +1,6 @@
 # TCP/SYN Flooding
 
-Script to SYN packages (_via TCP_) ports. Optional to set the number of packages.
+Script to send SYN packages (_via TCP_) to specific target and port. Optional to set maximum number of packages.
 
 ## Prepare environment
 
