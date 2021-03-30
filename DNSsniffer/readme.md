@@ -56,7 +56,6 @@ to interrupt press [CTRL + c] and follow terminal output.
 some example from my terminal...
 
 ```shell
-Enter your interface (eq en0): en11
 Sniffing started - press [CTRL] + [c] to interrupt sniffing:
 SRC: 172.20.10.10 - DST: 172.20.10.1 : eu-prod.asyncgw.teams.microsoft.com.
 SRC: 172.20.10.10 - DST: 172.20.10.1 : emea.ng.msg.teams.microsoft.com.
