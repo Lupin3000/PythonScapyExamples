@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import argparse
 import json
 import os
 import signal
@@ -28,7 +29,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
                 file_handler.write(json.dumps(stored_dns_requests))
                 print("Save content into: {}".format(os.path.abspath(target_file)))
 
-        show_top_domains = input("You like to see the top 5 DNSsniffer requests (Y/N)?: ")
+        show_top_domains = input("You like to see the top 5 DNSSniffer requests (Y/N)?: ")
         if show_top_domains == 'Y':
             top_domains = Counter(stored_dns_requests.values()).most_common(5)
             for key, value in top_domains:
@@ -55,9 +56,18 @@ def run_app():
     """
     Scapy packet sniffer function
     """
-    interface = input("Enter your interface (eq en0): ")
+    description = 'Simple Wifi scanner for 2.4 GHz range'
+    epilog = 'The author of this code take no responsibility for your use or misuse'
+    parser = argparse.ArgumentParser(prog='DNSSniffer.py', description=description, epilog=epilog)
+    parser.add_argument("interface", help="Your interface")
+    args = parser.parse_args()
+
+    if len(args.interface) < 1:
+        print('You did not provide any interface?')
+        exit(1)
+
     print("Sniffing started - press [CTRL] + [c] to interrupt sniffing:")
-    sniff(iface=interface, filter="port 53", prn=query_sniff, store=0)
+    sniff(iface=args.interface, filter="port 53", prn=query_sniff, store=0)
 
 
 if __name__ == "__main__":
