@@ -1,6 +1,6 @@
 # Wi-Fi Scanner
 
-Script to scan on 2.4 GHz Wi-Fi's (_if ENC is OPN or WEP the output is colored_).
+Script to scan on 2.4 GHz Wi-Fi's (_if ENC is OPN or WEP the output is colored_). Optional you can scan for STA's only. 
 
 ## Prepare environment
 
@@ -51,6 +51,9 @@ just run it...
 
 # start scanning on all 2.4 GHz channels
 (venv) $ sudo venv/bin/python ./ScanWifi.py wlan1 --all
+
+# filter for STA probe requests
+(venv) $ sudo venv/bin/python ./ScanWifi.py wlan1 --all --filter
 ```
 
 to interrupt press [CTRL + c]
@@ -71,6 +74,17 @@ b8:ce:a3:d6:81:d0        Dosmeethelm                         -71   6       WPA2/
 54:67:51:3c:2c:b4        UPC88417C7                          -68   6       WPA/PSK
 80:30:dc:c2:dd:62        Bose ST Home Thtr (2AB026)          -78   6       OPN
 ...
+```
+
+... with `--filter` to show only Probe Requests ...
+
+```shell
+Change channels for interface wlan1
+-------------------------------------------------------------------------------------
+STA 5c:aa:fd:b4:41:bb looking for Sonos_StdbhVj1gi78Xag6fMBAxKGPsP
+STA 45:03:2c:8b:7c:2d looking for N/A
+STA f8:0e:f9:36:d2:1c looking for Salt_2GHz_0EE4AE
+STA 44:03:2b:4b:7e:2d looking for WuTangLan
 ```
 
 [Go back](../README.md)
