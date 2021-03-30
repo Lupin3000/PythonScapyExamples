@@ -42,8 +42,11 @@ $ . venv/bin/activate
 just run it...
 
 ```shell
-# run DNS sniffer script
-(venv) $ sudo venv/bin/python ./DNSSniffer.py
+# show help (optional)
+(venv) $ sudo venv/bin/python ./DNSSniffer.py --help
+
+# run DNS sniffer on interface en11
+(venv) $ sudo venv/bin/python ./DNSSniffer.py en11
 ```
 
 to interrupt press [CTRL + c] and follow terminal output.
