@@ -71,7 +71,7 @@ SRC: 172.20.10.10 - DST: 172.20.10.1 : pr.ybp.yahoo.com.
 SRC: 172.20.10.10 - DST: 172.20.10.1 : s.yimg.com.
 SRC: 172.20.10.10 - DST: 172.20.10.1 : beap-bc.yahoo.com.
 Sniffing finished
-KeyboardInterrupt ID: 2 <frame at 0x7fa448c7b620, file '/Users/lupin/Desktop/myTest/venv/lib/python3.7/site-packages/scapy/arch/bpf/supersocket.py', line 420, code bpf_select> has been caught.
+KeyboardInterrupt ID: 2 ... has been caught.
 You like to save results to file report.json (Y/N)?: Y
 Save content into: /Users/lupin/Desktop/myTest/report.json
 You like to see the top 5 DNSsniffer requests (Y/N)?: Y
