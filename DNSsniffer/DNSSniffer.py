@@ -45,6 +45,7 @@ def query_sniff(pkt):
     if IP in pkt:
         ip_src = pkt[IP].src
         ip_dst = pkt[IP].dst
+
         if pkt.haslayer(DNS) and pkt.getlayer(DNS).qr == 0:
             domain = pkt.getlayer(DNS).qd.qname.decode("utf-8")
             now = datetime.now()

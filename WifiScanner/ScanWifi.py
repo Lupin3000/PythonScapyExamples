@@ -16,7 +16,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
     """
     print("Scanning finished")
     print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
-    exit(0)
+    exit(1)
 
 
 def evaluate_sniffing_packet(packet):
@@ -33,12 +33,15 @@ def evaluate_sniffing_packet(packet):
         if packet.type == 0 and packet.subtype == 8:
             bssid = packet[Dot11].addr2
             ssid = packet[Dot11Elt].info.decode().strip()
+
             if not ssid:
                 ssid = "N/A"
+
             try:
                 dbm = packet.dBm_AntSignal
             except:
                 dbm = "N/A"
+
             stats = packet[Dot11Beacon].network_stats()
             channel = stats.get("channel")
             protocol = stats.get("crypto")
@@ -71,6 +74,7 @@ def change_channel():
 
     print("Change channels for interface {}".format(interface))
     channel_number = 1
+
     while True:
         system(f"iwconfig {interface} channel {channel_number}")
         channel_number = channel_number % 14 + 1

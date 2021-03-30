@@ -15,7 +15,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
     """
     print("HTTP sniffing finished")
     print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
-    exit(0)
+    exit(1)
 
 
 def http_sniff(packet):
@@ -27,6 +27,7 @@ def http_sniff(packet):
         method = packet[HTTPRequest].Method.decode()
 
         print("IP: {:<20} Method: {:<4} URL: {}".format(ip, method, url))
+
         if raw and packet.haslayer(Raw) and method == "POST":
             data = packet[Raw].load.decode().split("&")
             for element in data:

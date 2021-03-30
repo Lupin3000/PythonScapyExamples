@@ -17,6 +17,16 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
 
 
 def port_scan(network, port, show_negative):
+    """
+    Port scan function
+
+    :param network: target network
+    :type network: str
+    :param port: port
+    :type port: int
+    :param show_negative: show closed ports
+    :type show_negative: bool
+    """
     res = sr1(IP(dst=network) / TCP(dport=port), verbose=False, timeout=0.2)
     if res is not None and TCP in res:
         if res[TCP].flags == 18:
@@ -27,6 +37,9 @@ def port_scan(network, port, show_negative):
 
 
 def run_app():
+    """
+    Main function to parse arguments and run
+    """
     target = None
     negative_results = False
 

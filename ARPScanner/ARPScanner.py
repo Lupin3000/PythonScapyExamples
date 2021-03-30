@@ -13,7 +13,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
     """
     print("Scanning stopped")
     print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
-    exit(0)
+    exit(1)
 
 
 def arp_scan():

@@ -17,10 +17,19 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
 
 
 def run_traceroute(target):
+    """
+    Traceroute function
+
+    :param target: target
+    :type target: str
+    """
     traceroute(target)
 
 
 def run_app():
+    """
+    Main function to parse arguments and run
+    """
     description = 'TCP/SYN Traceroute script'
     epilog = 'The author of this code take no responsibility for your use or misuse'
     parser = argparse.ArgumentParser(prog='TCPSYNTraceroute.py', description=description, epilog=epilog)

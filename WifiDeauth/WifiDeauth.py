@@ -13,7 +13,7 @@ def keyboard_interrupt_handler(interrupt_signal, frame):
     """
     print("Stop sending deauthentication frames")
     print("KeyboardInterrupt ID: {} {} has been caught.".format(interrupt_signal, frame))
-    exit(0)
+    exit(1)
 
 
 def send_deauthentication_frames(target_mac, gateway_mac, interval, number, loop):
