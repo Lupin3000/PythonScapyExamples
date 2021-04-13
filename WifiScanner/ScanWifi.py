@@ -7,7 +7,7 @@ from sys import exit
 from threading import Thread
 from time import sleep
 
-from scapy.layers.dot11 import Dot11, Dot11Beacon, Dot11ProbeResp, Dot11ProbeReq, Dot11Elt, sniff
+from scapy.layers.dot11 import Dot11, Dot11Beacon, Dot11ProbeResp, Dot11ProbeReq, Dot11Elt, sniff, RadioTap
 
 
 def keyboard_interrupt_handler(interrupt_signal, frame):
@@ -59,6 +59,7 @@ def evaluate_sniffing_packet_sta(packet):
         if packet.type == 0 and packet.subtype == 4:
             mac = packet.addr2
             ssid = packet[Dot11Elt].info.decode().strip()
+            rssi = RadioTap.dBm_AntSignal
 
             if not ssid:
                 ssid = "N/A"
